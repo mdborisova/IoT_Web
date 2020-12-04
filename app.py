@@ -16,9 +16,9 @@ def get_data():
     data = Data.query.all()[0]
     data_json = {
         "BATTERY": randint(0, 100),
-        "TEMP_1": randint(-20, 50),
-        "TEMP_2": randint(-20, 50),
-        "TEMP_3": randint(-20, 50),
+        "TEMP_1": randint(-20, 50) if data.on else 0,
+        "TEMP_2": randint(-20, 50) if data.on else 0,
+        "TEMP_3": randint(-20, 50) if data.on else 0,
         "IS_ON": data.on
     }
     return jsonify(data_json)
