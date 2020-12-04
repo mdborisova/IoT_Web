@@ -1,0 +1,82 @@
+{% extends "base_with_navbar.html" %}
+
+
+{% block data %}
+    <div class="container-fluid">
+        <h1 class="mt-4">Dashboard</h1>
+
+        <div class="jumbotron jumbotron-fluid dashboard">
+            <div class="row align-items-center">
+                <div class="col-xl-3">
+                    <div class="card bg-dark p-4 border-0">
+                        <h5 class="card-title text-center text-white">Battery</h5>
+
+                        <div class="row-battery mb-2">
+                            <svg id="battery" data-name="battery" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 257.13 142.85">
+                                <path class="cls-1"
+                                      d="M257.13,92.85a14.24,14.24,0,0,1-14.29,14.29V125A17.91,17.91,0,0,1,225,142.85H17.86A17.91,17.91,0,0,1,0,125V17.86A17.91,17.91,0,0,1,17.86,0H225a17.91,17.91,0,0,1,17.86,17.86V35.71A14.24,14.24,0,0,1,257.13,50Zm-14.29,0V50H228.56V17.86A3.53,3.53,0,0,0,225,14.29H17.86a3.52,3.52,0,0,0-3.57,3.57V125a3.52,3.52,0,0,0,3.57,3.57H225a3.53,3.53,0,0,0,3.57-3.57V92.85Z"></path>
+                                <rect class="power" x="26" y="26" width="19" height="90">
+                                </rect>
+                            </svg>
+                        </div>
+
+                        <p class="card-text text-center text-white" id="battery_power_num">10</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="card bg-dark border-0" id="temp1">
+                        <h5 class="card-title text-center text-white">Temp 1</h5>
+
+                        <div id="wrapper">
+                            <div class="thermometer-class" id="thermometer">
+                                <div id="temperature" style="height:0" data-value="0°C"></div>
+                                <div id="graduations"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="card bg-dark border-0" id="temp2">
+                        <h5 class="card-title text-center text-white">Temp 2</h5>
+
+                        <div id="wrapper">
+                            <div class="thermometer-class" id="thermometer">
+                                <div id="temperature" style="height:0" data-value="0°C"></div>
+                                <div id="graduations"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="card bg-dark border-0" id="temp3">
+                        <h5 class="card-title text-center text-white">Temp 3</h5>
+
+                        <div id="wrapper">
+                            <div class="thermometer-class" id="thermometer">
+                                <div id="temperature" style="height:0" data-value="0°C"></div>
+                                <div id="graduations"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="button" id="button-on-off">
+                    <circle class="toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004">
+                            <path fill="floralwhite"
+                                  d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"/>
+                        </svg>
+                    </circle>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
